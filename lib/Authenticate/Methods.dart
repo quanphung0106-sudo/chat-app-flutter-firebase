@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import 'package:chatapp_flutter_firebase/Authenticate/LoginScreen.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-=======
-import 'package:chat_app/Authenticate/LoginScreen.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
->>>>>>> login
 
 Future<User?> createAccount(String name, String email, String password) async {
   FirebaseAuth _auth = FirebaseAuth.instance;
@@ -41,19 +35,15 @@ Future<User?> createAccount(String name, String email, String password) async {
 Future<User?> logIn(String email, String password) async {
   FirebaseAuth _auth = FirebaseAuth.instance;
   FirebaseFirestore _firestore = FirebaseFirestore.instance;
-<<<<<<< HEAD
-=======
-  
->>>>>>> login
+
 
   try {
     UserCredential userCredential = await _auth.signInWithEmailAndPassword(
         email: email, password: password);
 
-<<<<<<< HEAD
+
     print("Login Sucessfull");
-=======
->>>>>>> login
+
     _firestore
         .collection('users')
         .doc(_auth.currentUser!.uid)

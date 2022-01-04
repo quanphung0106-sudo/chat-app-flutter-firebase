@@ -230,14 +230,14 @@ class _CreateAccountState extends State<CreateAccount> {
           Fluttertoast.showToast(msg: "Tài khoản được tạo thành công!");
         } else {
           Fluttertoast.showToast(
-              msg: "Lỗi mất rồi! Hình như gmail này đã được tạo rồi :((");
+              msg: "Lỗi! Tài khoản đã được tạo vui lòng kiểm tra lại!");
           setState(() {
             isLoading = false;
           });
         }
       });
     } else {
-      Fluttertoast.showToast(msg: "Làm ơn nhập đầy đúng đi anh bạn :((");
+      Fluttertoast.showToast(msg: "Các trường không được để trống!");
     }
   }
 }
