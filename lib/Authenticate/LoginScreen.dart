@@ -38,15 +38,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: CircularProgressIndicator(),
               ),
             )
-          : Container(
+          : SingleChildScrollView(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Form(
                 key: formKey,
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: size.height / 20,
-                    ),
                     Container(
                       alignment: Alignment.centerLeft,
                       width: size.width / 0.5,
@@ -54,8 +51,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           icon: Icon(Icons.arrow_back_ios), onPressed: () {}),
                     ),
                     SizedBox(
-                      height: size.height / 50,
-                    ),
+                        height: 200,
+                        child: Image.asset(
+                          "assets/logo.png",
+                          fit: BoxFit.contain,
+                        ),
+                      ),
                     Center(
                       child: Text(
                         "Welcom to Group 4",
